@@ -19,7 +19,7 @@ public class ExportarExcel {
 		HSSFSheet sheet = workbook.createSheet();
 		workbook.setSheetName(0, "Hoja excel");
 
-		String[] headers = new String[] { "ID", "PC", "Nombre", "Apellido" };
+		String[] headers = new String[] { "ID", "PC", "Nombre", "Apellidos" };
 
 		Object[][] data = new Object[][] {
 				new Object[] { 1, "PC 1", "Manuel Jesús", "Martín Prieto" },
@@ -42,16 +42,17 @@ public class ExportarExcel {
 				new Object[] { 18, "PC 18", "Manuel Jesús", "Martín Prieto" },
 				new Object[] { 19, "PC 19", "Manuel Jesús", "Martín Prieto" },
 				new Object[] { 20, "PC 20", "Manuel Jesús", "Martín Prieto" },
-				new Object[] { 21, "PC 21", "Manuel Jesús", "Martín Prieto" } };
+				new Object[] { 21, "PC 21", "Manuel Jesús", "Martín Prieto" }
+		};
 
 		CellStyle headerStyle = workbook.createCellStyle();
-		Font font = workbook.createFont();
+		/*Font font = workbook.createFont();
 		font.setBoldweight(Font.BOLDWEIGHT_BOLD);
 		headerStyle.setFont(font);
 
 		CellStyle style = workbook.createCellStyle();
 		style.setFillForegroundColor(IndexedColors.LIGHT_YELLOW.getIndex());
-		style.setFillPattern(CellStyle.SOLID_FOREGROUND);
+		style.setFillPattern(CellStyle.SOLID_FOREGROUND);*/
 
 		HSSFRow headerRow = sheet.createRow(0);
 		for (int i = 0; i < headers.length; ++i) {
